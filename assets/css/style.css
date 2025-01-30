@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Garamond, serif;
+}
+
+#bg-video {
+    opacity: 2;
+    position: fixed;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body {
+    min-height: 40vh;
+    background-image: url(../../assets/img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: whitesmoke;
+    padding: 15px 30px;
+}
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.navbar-links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links ul li {
+    position: relative; 
+    margin: 0 15px;
+}
+
+.navbar-links ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-links ul li a:hover {
+    background-color: #555;
+    color: #21abd5;
+    border-radius: 4px;
+}
+
+.links {
+    position: absolute;
+    bottom: -30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: whitesmoke;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+}
+
+.navbar-links ul li:hover .links {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        gap: 10px;
+
+    }
+}
+.hero {
+    background-image: url(../../assets/img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: whitesmoke;
+    text-align: center;
+    padding: 100px 30px;
+    border-radius: 10px;
+    margin: 70px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero a {
+    text-decoration: none;
+    background: #ffffff;
+    color: #4d4e4e;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero a:hover {
+    background: #21abd5;
+    color: #fff;
+}
