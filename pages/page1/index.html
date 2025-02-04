@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../page1/assets/css/style.css">
+    <title>Player Management</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-header">
+            <img src="./assets/img/logos.jpg" alt="Logo" class="navbar-logo">
+        </div>
+        <nav class="navbar-links">
+            <ul>
+                <li>
+                <a href="../../index.html">HOME</a>
+            </li>
+            </ul>
+        </nav>
+    </header>
+
+    <video autoplay loop muted plays-inline id="bg-video">
+        <source src="../page1/assets/video/loop2.mp4" type="video/mp4">
+    </video>
+
+    <section class="player-management">
+        <h2>ADD PLAYERS</h2>
+        <input type="text" id="playerName" placeholder="Name (Max 10 Characters)">
+        <input type="number" id="playerScore" placeholder="Score (Max 100)">
+        <input type="number" id="playerLevel" placeholder="Level (Max 100)">
+        <button id="addPlayerBtn">+ ADD PLAYER</button>
+
+        <p id="playerCount">Players Added: 0/10</p>
+
+        <h2>LEADERBOARDS</h2>
+        <select id="sortCriteria">
+            <option value="score">Sort by Score</option>
+            <option value="level">Sort by Level</option>
+            <option value="name">Sort by Name</option>
+        </select>
+
+        <table id="playerTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Level</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <button id="clearLeaderboardBtn">Clear Leaderboard</button>
+    </section>
+
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; Leonardo Alexis | 2025</p>
+        </div>
+    </footer>
+
+    <script src="../page1/assets/js/scripts.js"></script>
+</body>
+</html>
+
